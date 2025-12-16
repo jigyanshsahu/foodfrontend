@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { assets } from "../../assets/assets";
 import "./loginpopup.css";
-import { StoreContext } from "../../context/Storecontext";   // IMPORTANT FIX
+import { storecontext } from "../../context/storecontext";   // IMPORTANT FIX
 import axios from "axios";
 
 const Loginpopup = ({ setShowlogin }) => {
 
-  const { url, settoken } = useContext(StoreContext);
+  const { url, settoken } = useContext(storecontext);
 
   const [currentstate, setcurrentstate] = useState("Login");
 

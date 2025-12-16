@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StoreContext } from "../../context/Storecontext";
+import { storecontext } from "../../context/storecontext";
 import axios from "axios";
 
 const Myorders = () => {
-  const { url, token } = useContext(StoreContext);
+  const { url, token } = useContext(storecontext);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

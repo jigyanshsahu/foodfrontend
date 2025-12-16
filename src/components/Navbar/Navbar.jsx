@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { StoreContext } from "../../context/Storecontext";
+import { storecontext } from "../../context/storecontext";
 import { assets } from "../../assets/assets";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = ({ setShowlogin }) => {
   const [menu, setmenu] = useState("Home");
   const navigate = useNavigate();
-  const { token, settoken } = useContext(StoreContext);
+  const { token, settoken } = useContext(storecontext);
 
   const [openDropdown, setOpenDropdown] = useState(false);
 

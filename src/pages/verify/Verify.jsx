@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import { StoreContext } from '../../context/Storecontext'
+import { storecontext } from '../../context/storecontext'
 import './verify.css'
 import axios from 'axios'
 
@@ -11,7 +11,7 @@ const Verify = () => {
   const success = searchParams.get("success");
   const orderid = searchParams.get("orderid");
 
-  const { url } = useContext(StoreContext);
+  const { url } = useContext(storecontext);
 
   const verifyPayment = async () => {
     try {

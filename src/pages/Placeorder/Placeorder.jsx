@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StoreContext } from "../../context/StoreContext";
+import { storecontext } from "../../context/storecontext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Placeorder = () => {
   const navigate = useNavigate();
   const { getcarttotalamount, token, food_list, cartitem, url } =
-    useContext(StoreContext);
+    useContext(storecontext);
 
   const [data, setdata] = useState({
     firstName: "",

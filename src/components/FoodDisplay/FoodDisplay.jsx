@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import './fooddisplay.css';
-import { StoreContext } from '../../context/Storecontext';
+import { storecontext } from '../../context/storecontext';
 import fooditem from '../fooditem/fooditem';
 
 const foodDisplay = ({ category }) => {
-  const { food_list, url } = useContext(StoreContext);
+  const { food_list, url } = useContext(storecontext);
 
   return (
     <div className='food-display mt-7' id='food-display'>

@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-export const StoreContext = createContext(null);
+export const storecontext = createContext(null);
 
-const StoreContextProvider = (props) => {
+const storecontextProvider = (props) => {
   const [cartitem, setcartitem] = useState({});
   const [token, settoken] = useState("");
   const [food_list, setfood_list] = useState([]);
@@ -90,10 +90,10 @@ const addtocart = async (itemid) => {
   };
 
   return (
-    <StoreContext.Provider value={contextValue}>
+    <storecontext.Provider value={contextValue}>
       {props.children}
-    </StoreContext.Provider>
+    </storecontext.Provider>
   );
 };
 
-export default StoreContextProvider;
+export default storecontextProvider;
