@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { StoreContext } from "../../context/Storecontext";
 import { assets } from "../../assets/assets";
-import "./navbar.css";
+import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ setShowlogin }) => {
